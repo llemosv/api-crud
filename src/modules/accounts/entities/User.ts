@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { Entity, PrimaryColumn, Column, CreateDateColumn } from "typeorm";
+import { Entity, Column, CreateDateColumn, PrimaryColumn } from "typeorm";
 
 @Entity("users")
 class User {
@@ -10,16 +10,16 @@ class User {
   name: string;
 
   @Column()
-  username: string;
-
-  @Column()
   password: string;
 
   @Column()
   email: string;
 
   @Column()
-  isAdmin: boolean;
+  cpf: string;
+
+  @Column()
+  country: string;
 
   @CreateDateColumn()
   created_at: Date;
